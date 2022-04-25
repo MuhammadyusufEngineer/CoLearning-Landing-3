@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gulp with TailwindCSS</title>
+    <link rel="shortcut icon" href="./img/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body class="overflow-x-hidden">
+
+    <section class="pt-0 bg-[#F6F8FB] min-h-screen">
+        <header>
+            <nav class="main-container flex-row justify-between items-center py-6">
+                <div
+                    class="flex lg:hidden w-full min-h-screen absolute top-0 left-[-100%] justify-center items-center bg-slate-300 z-50 duration-300 mobile-menu">
+                    <ul class="flex flex-col min-h-full select-none mobile_menu">
+                        <li class="menu__item"><a class="menu__link underline-animation" href="#">Home</a></li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Advertise</a> <img class="chevron-down duration-300"
+                                src="./img/chevron-down.png" alt="">
+                            <ul class="absolute list top-7 bg-white shadow-md py-5 rounded-b-md rounded-bl-md">
+                                <li class="menu__acc-item">
+                                    Value 1</li>
+                                <li class="menu__acc-item">
+                                    Value 2</li>
+                                <li class="menu__acc-item">
+                                    Value 3</li>
+                                <li class="menu__acc-item">
+                                    Value 4</li>
+                                <li class="menu__acc-item">
+                                    Value 5</li>
+                                <li class="menu__acc-item">
+                                    Value 6</li>
+                                <li class="menu__acc-item">
+                                    Value 7</li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Advertise</a> <img class="chevron-down duration-300"
+                                src="./img/chevron-down.png" alt="">
+                            <ul class="absolute list top-7 bg-white shadow-md py-5 rounded-b-md rounded-bl-md">
+                                <li class="menu__acc-item">
+                                    Value 1</li>
+                                <li class="menu__acc-item">
+                                    Value 2</li>
+                                <li class="menu__acc-item">
+                                    Value 3</li>
+                                <li class="menu__acc-item">
+                                    Value 4</li>
+                                <li class="menu__acc-item">
+                                    Value 5</li>
+                                <li class="menu__acc-item">
+                                    Value 6</li>
+                                <li class="menu__acc-item">
+                                    Value 7</li>
+                            </ul>
+                        </li>
+                        <li class="menu__item"><a class="menu__link underline-animation" href="#">Contacts</a></li>
+                    </ul>
+                </div>
+                <div
+                    class="relative left-0 sm:left-1/2 flex items-center gap-[14px] justify-start sm:translate-x-[-50%] md:left-0 md:translate-x-0 z-50">
+                    <img src="./img/Logo.png" alt="logo img and StartupLanding txt">
+                    <p class="logoName-1 font-bold text-xl text-[#02073E] opacity-80">StartupLanding</p>
+                    <p class="logoName-2 font-bold text-xl text-[#02073E] opacity-80">Startup</p>
+                </div>
+                <div class="w-[400px] hidden lg:block">
+                    <ul class="flex justify-between select-none">
+                        <li class="menu__item">
+                            <a class="menu__link underline-animation" href="#">Home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link ad-selected-value" href="#">Advertise</a> <img
+                                class="chevron-down duration-300" src="./img/chevron-down.png" alt="">
+                            <ul class="absolute list top-7 bg-white shadow-md py-5 rounded-b-md rounded-bl-md">
+                                <li class="menu__acc-item">
+                                    Value 1</li>
+                                <li class="menu__acc-item">
+                                    Value 2</li>
+                                <li class="menu__acc-item">
+                                    Value 3</li>
+                                <li class="menu__acc-item">
+                                    Value 4</li>
+                                <li class="menu__acc-item">
+                                    Value 5</li>
+                                <li class="menu__acc-item">
+                                    Value 6</li>
+                                <li class="menu__acc-item">
+                                    Value 7</li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link ad-selected-value" href="#">Supports</a> <img
+                                class="chevron-down duration-300" src="./img/chevron-down.png" alt="">
+                            <ul class="absolute list top-7 bg-white shadow-md py-5 rounded-b-md rounded-bl-md">
+                                <li class="menu__acc-item">
+                                    Value 1</li>
+                                <li class="menu__acc-item">
+                                    Value 2</li>
+                                <li class="menu__acc-item">
+                                    Value 3</li>
+                                <li class="menu__acc-item">
+                                    Value 4</li>
+                                <li class="menu__acc-item">
+                                    Value 5</li>
+                                <li class="menu__acc-item">
+                                    Value 6</li>
+                                <li class="menu__acc-item">
+                                    Value 7</li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link underline-animation" href="#">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn-border hidden lg:block">Register now</button>
+                <div
+                    class="mobile-burger block lg:hidden relative z-50 right-0 w-6 h-6 bg-cover bg-no-repeat bg-center">
+                </div>
+            </nav>
+        </header>
+        <main class="main-container items-start mt-24">
+            <div class="w-full md:w-[51%]">
+                <h1 class="text-3xl md:text-5xl xl:text-[65px] font-bold -tracking-[1.5px] text-blue leading-[120%]">
+                    Great software is
+                    built with amazing
+                    developers</h1>
+                <p class="main-paragraph mt-7 mb-[30px] pr-0 lg:pr-32">We help build and manage a team of world-class
+                    developers to bring your vision to life</p>
+                <div class="min-h-[4rem] flex gap-4 mb-[68px] main__form">
+                    <input class="min-h-[4rem] rounded-lg pl-6 w-[370px] outline-none"
+                        style="box-shadow: 0px 10px 50px rgba(48, 98, 145, 0.08);" type="text"
+                        placeholder="Subscribe newsletter">
+                    <button class="btn-pink h-16 min-h-[4rem] w-[180px]">Subscribe</button>
+                </div>
+                <div class="flex flex-col items-center xl:flex-row gap-5">
+                    <p class="text-base leading-[42px] text-[#566272] font-thin opacity-60">Sponsored by</p>
+                    <div
+                        class="flex flex-wrap items-center justify-around sm:justify-between main__sponsors min-w-[363px]">
+                        <img class="cursor-pointer grayscale-[70%] mb-5 hover:grayscale-0 duration-300 "
+                            src="./img/paypal.png" alt="">
+                        <img class="cursor-pointer grayscale-[70%] mb-5 hover:grayscale-0 duration-300 "
+                            src="./img/google.png" alt="">
+                        <img class="cursor-pointer grayscale-[70%] mb-5 hover:grayscale-0 duration-300 "
+                            src="./img/dropbox.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block w-1/2">
+                <img src="./img/hero-img-2.png" alt="">
+            </div>
+        </main>
+    </section>
+
+    <section>
+        <p class="title-xs">Quality Features</p>
+        <h3 class="title-lg">Meet exciting feature of app</h3>
+        <div class="main-container flex-wrap justify-evenly">
+            <div class="flex flex-col md:flex-row justify-around items-center md:flex-wrap w-full md:w-1/2">
+                <div class="main-boxes-col mr-5 items-center">
+                    <div class="main-img-icon main-img-icon-bg-1">
+                        <img src="./img/pen.png" alt="">
+                    </div>
+                    <h6 class="title-sm text-center">Unlimited Customization</h6>
+                    <p class="main-paragraph text-center">Get your blood tests delivered at home collect a sample from
+                        the your blood tests.</p>
+                </div>
+                <div class="main-boxes-col mr-5 items-center">
+                    <div class="main-img-icon main-img-icon-bg-2">
+                        <img src="./img/vector.png" alt="">
+                    </div>
+                    <h6 class="title-sm text-center">Unlimited Customization</h6>
+                    <p class="main-paragraph text-center">Get your blood tests delivered at home collect a sample from
+                        the your blood tests.</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-around items-center md:flex-wrap w-full md:w-1/2">
+                <div class="main-boxes-col mr-5 items-center">
+                    <div class="main-img-icon main-img-icon-bg-3">
+                        <img src="./img/edit.png" alt="">
+                    </div>
+                    <h6 class="title-sm text-center">Unlimited Customization</h6>
+                    <p class="main-paragraph text-center">Get your blood tests delivered at home collect a sample from
+                        the your blood tests.</p>
+                </div>
+                <div class="main-boxes-col mr-5 items-center">
+                    <div class="main-img-icon  main-img-icon-bg-4">
+                        <img src="./img/cup.png" alt="">
+                    </div>
+                    <h6 class="title-sm text-center">Unlimited Customization</h6>
+                    <p class="main-paragraph text-center">Get your blood tests delivered at home collect a sample from
+                        the your blood tests.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="main-container flex-col lg:flex-row boost_agency">
+            <div class="w-4/5 md:w-1/2 mb-10 relative">
+                <img src="./img/rocket-man.png" alt="">
+            </div>
+            <div class="w-full md:w-1/2">
+                <h2 class="text-2xl sm:text-4xl xl:text-5xl title-xl text-left">Boost your agencies by choosing Ninja
+                    developers</h2>
+                <p class="main-paragraph mb-[30px]">Create custom landing pages with Shades that convert more visitors
+                    than any website, no coding required.</p>
+                <ul class="mb-[10px] ">
+                    <li class="flex items-center text-lg leading-[42px]   text-purple font-bold"><img class="mr-[11px]"
+                            src="./img/verify.png" alt="">Unlimited design possibility </li>
+                    <li class="flex items-center text-lg leading-[42px]   text-purple font-bold"><img class="mr-[11px]"
+                            src="./img/verify.png" alt="">Completely responsive features </li>
+                    <li class="flex items-center text-lg leading-[42px]   text-purple font-bold"><img class="mr-[11px]"
+                            src="./img/verify.png" alt="">Easy to customize plugins </li>
+                </ul>
+                <div class="flex items-center learn_more cursor-pointer">
+                    <a href="#" class="ml-8 mr-[6px] font-bold text-base leading-[42px]   text-purple">Learn
+                        more</a><img src="./img/chevron-right.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="flex flex-col items-center">
+        <h2 class="title-xl max-w-[622px]">Leading companies trust us to develop software</h2>
+        <p class="main-paragraph text-center max-w-[553px] mb-5">We believe it's important for everyone to have access
+            to software espicially when it comes to digital learning be navigate</p>
+        <div class="flex items-center learn_more cursor-pointer mb-[50px] leading-[42px]">
+            <a href="#" class="ml-8 mr-[6px] font-bold text-base leading-[42px]   text-purple">Learn
+                more</a><img src="./img/chevron-right.png" alt="">
+        </div>
+        <div class="w-4/5 relative mb-40">
+            <div class=" rounded-[7px] overflow-hidden z-10">
+                <video src="./img/video.mp4" onmouseenter="showBtn()" onmouseleave="hideBtn()" onclick="Play()"
+                    class="video" style="width:100% !important"></video>
+            </div>
+            <div onclick="Play()"
+                class="absolute w-[120px] h-[120px] top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-20">
+                <img class="play duration-300 select-none" src="./img/play.png" alt="play icon">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p class="main-paragraph text-center">Customer Comments</p>
+        <h3 class="title-lg">Why customers loves us</h3>
+        <div class="main-container testimonial flex-col relative">
+            <div class="min-h-[370px] w-full overflow-hidden">
+                <h1 class="left-auto xl:left-1/2 xl:-translate-x-1/2 tab-body active text-2xl sm:text-4xl font-playfair leading-[200%] font-normal text-center text-[#0F2137] min-h-[100px] w-full max-w-[822px]">
+                    Get your blood tests delivered at home collect a sample from the your blood tests.Get your blood
+                    tests
+                </h1>
+                <h1 class="left-auto xl:left-1/2 xl:-translate-x-1/2 tab-body text-2xl sm:text-4xl font-playfair leading-[200%] font-normal text-center text-[#0F2137] min-h-[100px] max-w-[822px]">
+                    They
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vel iste, cum porro at error ad
+                    omnis
+                    fugiat.</h1>
+                <h1 class="left-auto xl:left-1/2 xl:-translate-x-1/2 tab-body text-2xl sm:text-4xl font-playfair leading-[200%] font-normal text-center text-[#0F2137] min-h-[100px] max-w-[822px]">
+                    They
+                    are doing amazing job with hundred percent customer satisfaction, Love their work and would like to
+                    work
+                    with them again</h1>
+            </div>
+            <div class="w-full flex flex-row flex-wrap justify-evenly relative">
+                <div class="w-[200px] cursor-pointer mb-10 gap-[13px] flex flex-row items-center tab-btn active">
+                    <div>
+                        <img src="./img/user-1.png" alt="">
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <p class="text-blue font-medium text-lg leading-[30px]">Pierre Hackett</p>
+                        <p class="text-[15px] text-[#343D48] font-normal leading-[28px]">VP of Engineering</p>
+
+                    </div>
+                </div>
+                <div class="w-[200px] cursor-pointer mb-10 gap-[13px] flex flex-row items-center tab-btn">
+                    <div>
+                        <img src="./img/user-2.png" alt="">
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <p class="text-blue font-medium text-lg leading-[30px]">Pierre Hackett</p>
+                        <p class="text-[15px] text-[#343D48] font-normal leading-[28px]">VP of Engineering</p>
+
+                    </div>
+                </div>
+                <div class="w-[200px] cursor-pointer mb-10 gap-[13px] flex flex-row items-center tab-btn">
+                    <div>
+                        <img src="./img/user-3.png" alt="">
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <p class="text-blue font-medium text-lg leading-[30px]">Pierre Hackett</p>
+                        <p class="text-[15px] text-[#343D48] font-normal leading-[28px]">VP of Engineering</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="main-container flex-col lg:flex-row">
+            <div class="w-full lg:w-1/2">
+                <h2 class="title-xl text-left pr-0 lg:pr-10 mb-6">Free customer support to ensure what you like to
+                    expect</h2>
+                <p class="main-paragraph mb-6 p-0 lg:pr-10 ">We offer a risk-free trial period of up to two weeks. You
+                    will only have to
+                    pay if
+                    you are happy with the developer and wish to continue. If you are unsatisfied, we’ll refund payment
+                    or
+                    fix issues on our dime period customers.
+                </p>
+                <p class="main-paragraph p-0 lg:pr-10 ">If you are happy with the developer and wish to continue. If you
+                    are
+                    unsatisfied,
+                    we’ll refund payment or fix issues.
+                </p>
+                <div class="flex items-center learn_more cursor-pointer mb-[50px] leading-[42px]">
+                    <a href="#" class="mr-[6px] font-bold text-base leading-[42px]   text-purple">Learn
+                        more</a><img src="./img/chevron-right.png" alt="">
+                </div>
+            </div>
+            <div class="w-1/2">
+                <img src="./img/chat-man.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#F8FAFC] pb-[282px]">
+        <p class="title-xs text-center">Quality Features</p>
+        <h3 class="title-lg">Tutorials that people love most</h3>
+        <div class="main-container flex-wrap justify-evenly">
+            <div
+                class="rounded-[10px] w-[410px] mr-5 mb-10 tutorials-box overflow-hidden hover:-translate-y-5 duration-300 cursor-pointer">
+                <div>
+                    <img src="./img/laptop-1.png" alt="">
+                </div>
+                <div class="p-[30px] bg-white">
+                    <h5 class="title-md">How to work with prototype design with adobe xs featuring tools</h5>
+                    <div class="flex items-center gap-[7px]">
+                        <img src="./img/chat.png" alt="">
+                        <p class="text-base leading-[162%] font-medium text-[#343D48]">22 Comments</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="rounded-[10px] w-[410px] mr-5 mb-10 tutorials-box overflow-hidden hover:-translate-y-5 duration-300 cursor-pointer">
+                <div>
+                    <img src="./img/laptop-2.png" alt="">
+                </div>
+                <div class="p-[30px] bg-white">
+                    <h5 class="title-md">How to work with prototype design with adobe xs featuring tools</h5>
+                    <div class="flex items-center gap-[7px]">
+                        <img src="./img/chat.png" alt="">
+                        <p class="text-base leading-[162%] font-medium text-[#343D48]">22 Comments</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="rounded-[10px] w-[410px] mr-5 mb-10 tutorials-box overflow-hidden hover:-translate-y-5 duration-300 cursor-pointer">
+                <div>
+                    <img src="./img/laptop-3.png" alt="">
+                </div>
+                <div class="p-[30px] bg-white">
+                    <h5 class="title-md">How to work with prototype design with adobe xs featuring tools</h5>
+                    <div class="flex items-center gap-[7px]">
+                        <img src="./img/chat.png" alt="">
+                        <p class="text-base leading-[162%] font-medium text-[#343D48]">22 Comments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="relative footer py-16 min-h-[300px] bg-white">
+        <div class="absolute hire_developers -top-1/2 left-[10%] main-container flex-col 2xl:flex-row justify-evenly rounded-[10px] overflow-hidden bg-[#8D448B] py-11 pl-[75px] pr-[82px]">
+            <p class="w-full 2xl:w-1/3 text-[36px] text-white font-bold leading-[153%] -tracking-[1.5px]">Hire the
+                world’s best
+                developers
+                and designers around!
+            </p>
+            <div class="flex justify-around w-11/12 xl:w-4/6 gap-5">
+                <div>
+                    <img src="./img/arrow.png" alt="">
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="./img/three-lines-up.png" class="mb-3" alt="">
+                    <button
+                        class="bg-white hover:bg-[#8D448B] hover:text-white border border-solid border-transparent hover:border-white text-lg font-bold text-purple tracking-widest px-11 py-[19px] h-auto">HIRE
+                        DEVELOPERS</button>
+                    <img src="./img/three-lines-down.png" class="mt-3" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class="main-container absolute left-[10%] bottom-[61px]">
+            <div class="flex items-center justify-between w-full">
+                <div class="flex items-center">
+                    <div
+                        class="relative left-0 sm:left-1/2 flex items-center gap-[14px] justify-start sm:translate-x-[-50%] md:left-0 md:translate-x-0 z-50">
+                        <img src="./img/Logo.png" alt="logo img and StartupLanding txt">
+                        <p class="font-bold text-xl text-[#02073E] opacity-80">StartupLanding</p>
+                    </div>
+                    <p class="font-normal text-sm text-blue opacity-60">Copyright by <span class="year"></span> Redq,
+                        Inc</p>
+                </div>
+                <div class="w-[400px] hidden lg:block">
+                    <ul class="flex justify-between select-none">
+                        <li class="menu__item">
+                            <a class="menu__link underline-animation" href="#">Home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link underline-animation" href="#">Advertise</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link underline-animation" href="#">Supports</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link underline-animation" href="#">Marketing</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link underline-animation" href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- My.js -->
+    <script src="./js/scripts.js"></script>
+
+
+</body>
+
+</html>
