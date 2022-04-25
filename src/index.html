@@ -376,40 +376,38 @@
         </div>
     </section>
 
-    <footer class="relative footer py-16 min-h-[300px] bg-white">
-        <div class="absolute hire_developers -top-1/2 left-[10%] main-container flex-col 2xl:flex-row justify-evenly rounded-[10px] overflow-hidden bg-[#8D448B] py-11 pl-[75px] pr-[82px]">
-            <p class="w-full 2xl:w-1/3 text-[36px] text-white font-bold leading-[153%] -tracking-[1.5px]">Hire the
+    <footer class="footer py-16 min-h-[254px] bg-white">
+        <div class="main-container -translate-y-1/2 flex-col lg:flex-row justify-evenly rounded-[10px] overflow-hidden bg-[#8D448B] py-11 pl-[75px] pr-[82px]">
+            <p class="footer-text w-full text-center lg:text-left xl:w-1/3 text-2xl mb-5 text-white font-bold leading-[153%] -tracking-[1.5px]">Hire the
                 world’s best
                 developers
                 and designers around!
             </p>
             <div class="flex justify-around w-11/12 xl:w-4/6 gap-5">
-                <div>
+                <div class="hidden xl:block">
                     <img src="./img/arrow.png" alt="">
                 </div>
                 <div class="flex flex-col items-center">
                     <img src="./img/three-lines-up.png" class="mb-3" alt="">
-                    <button
-                        class="bg-white hover:bg-[#8D448B] hover:text-white border border-solid border-transparent hover:border-white text-lg font-bold text-purple tracking-widest px-11 py-[19px] h-auto">HIRE
+                    <button class="footer-btn bg-white hover:bg-[#8D448B] hover:text-white border border-solid border-transparent hover:border-white text-sm sm:text-[17px] font-bold text-purple tracking-widest h-auto sm:min-h-[60px] w-[260px]">HIRE
                         DEVELOPERS</button>
                     <img src="./img/three-lines-down.png" class="mt-3" alt="">
                 </div>
             </div>
 
         </div>
-        <div class="main-container absolute left-[10%] bottom-[61px]">
-            <div class="flex items-center justify-between w-full">
-                <div class="flex items-center">
-                    <div
-                        class="relative left-0 sm:left-1/2 flex items-center gap-[14px] justify-start sm:translate-x-[-50%] md:left-0 md:translate-x-0 z-50">
-                        <img src="./img/Logo.png" alt="logo img and StartupLanding txt">
+        <div class="main-container">
+            <div class="flex flex-col xl:flex-row items-center justify-between w-full">
+                <div class="flex flex-col lg:flex-row items-center gap-3 mb-10">
+                    <div class="relative left-0 sm:left-1/2 flex items-center gap-[14px] justify-start sm:translate-x-[-50%] md:left-0 md:translate-x-0 z-50">
+                        <div><img src="./img/Logo.png" alt="logo img and StartupLanding txt"></div>
                         <p class="font-bold text-xl text-[#02073E] opacity-80">StartupLanding</p>
                     </div>
                     <p class="font-normal text-sm text-blue opacity-60">Copyright by <span class="year"></span> Redq,
                         Inc</p>
                 </div>
-                <div class="w-[400px] hidden lg:block">
-                    <ul class="flex justify-between select-none">
+                <div class="w-[400px] block mb-10">
+                    <ul class="flex flex-col items-center sm:flex-row justify-between select-none">
                         <li class="menu__item">
                             <a class="menu__link underline-animation" href="#">Home</a>
                         </li>
